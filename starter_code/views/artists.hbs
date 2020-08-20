@@ -1,12 +1,13 @@
+  
 {{!-- {{#each artists}} --}}
 {{!-- {{/each}} --}}
-<div class = "boxes">
+<div class = "artist-list">
     <ul>
 {{#each results.artists.items}}
-<li>
-<img src={{this.images.[0]}}>
+<li class='artist-box'>
+<img style="width: 200px;" src={{this.images.[0].url}}>
 {{this.name}}
-<a href="/albums/{{id}}">View albums</a>
+<a class="artist-link" href="/albums/{{id}}">View albums</a>
 
 </li>
 {{/each}}
